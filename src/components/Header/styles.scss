@@ -2,13 +2,38 @@
     background-color: #F5F5F5;
     height: 80px;
 
+    @media (max-width: 768px) {
+        height: 160px;
+        padding-top: 20px;
+    }
+
+    @media (max-width: 568px) {
+        height: 373px;
+    }
+
     &__container {
         display: flex;
         line-height: 80px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            line-height: 40px;
+            text-align: center;
+        }
     }
 
     &__nav {
+        display: flex;
         margin-left: auto;
+
+        @media (max-width: 768px) {
+            margin: 0 auto;
+        }
+
+        @media (max-width: 568px) {
+            flex-direction: column;
+            margin: 30px 0;
+        }
     }
 
     &__nav-link {
@@ -20,6 +45,11 @@
         &--active {
             font-weight: 700;
         }
+
+        @media (max-width: 568px) {
+            margin: 0;
+        }
+
     }
 
     &__button {

@@ -16,10 +16,20 @@
 
     &__container-inner {
         max-width: 824px;
-        height: 127px;
+        min-height: 127px;
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
+
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-bottom: 30px;
+        }
+
+        @media (max-width: 568px) {
+            flex-direction: column;
+        }
     }
 
     &__card-text {
@@ -27,5 +37,9 @@
         font-size: 17px;
         line-height: 27px;
         color: #000C2D;
+
+        @media (max-width: 768px) {
+            margin-right: 20px;
+        }
     }
 }
