@@ -1,16 +1,20 @@
 import './styles.scss';
+import {ReactComponent as LogoIcon } from '../../assets/icons/logo.svg';
 
 export const Header = () => {
     return (
-        <div className='header'>
-            <a href="/">logo</a>
-            <nav>
-                <a href="/">Features</a>
-                <a href="/">Blog</a>
-                <a href="/">Pricing</a>
-                <a href="/">Company</a>
-            </nav>
-            <button>Get a demo</button>
-        </div>
+        <header className="header">
+            <div className='header__container container'>
+                <a href="/" className='header__logo'><LogoIcon height={28}/></a>
+                <nav className='header__nav'>
+                    <a href="/" className='header__nav-link header__nav-link--active'>Features</a>
+                    <a href="/" className='header__nav-link'>Blog</a>
+                    <a href="/" className='header__nav-link'>Pricing</a>
+                    <a href="/" className='header__nav-link'>Company</a>
+                </nav>
+                <button className='header__button'>Get a demo</button>
+            </div>
+        </header>
+        
     )
 }
