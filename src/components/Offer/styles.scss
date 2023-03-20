@@ -1,45 +1,44 @@
 .offer {
-    background-color: rgba(0, 255, 133, 0.08);
-    padding: 100px 0;
-    text-align: center;
-    height: 527px;
+  background-color: rgba(0, 255, 133, 0.08);
+  padding: 100px 0;
+  text-align: center;
 
-    &__container {
-    background: url('../../assets/icons/bgImg.svg') bottom left no-repeat,
-    url('../../assets/icons/bgImg.svg') top right no-repeat;
+  &__container {
+    background: url("../../assets/icons/triangles.svg") bottom left no-repeat,
+      url("../../assets/icons/triangles.svg") top right no-repeat;
+  }
+
+  &__title {
+    font-size: 40px;
+    margin-bottom: 103px;
+  }
+
+  &__container-inner {
+    max-width: 824px;
+    min-height: 127px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 30px;
     }
 
-    &__title {
-        font-size: 40px;
-        margin-bottom: 103px;
+    @media (max-width: 568px) {
+      flex-direction: column;
     }
+  }
 
-    &__container-inner {
-        max-width: 824px;
-        min-height: 127px;
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto;
+  &__card-text {
+    margin-top: 24px;
+    font-size: 17px;
+    line-height: 27px;
+    color: #000c2d;
 
-        @media (max-width: 768px) {
-            flex-wrap: wrap;
-            justify-content: center;
-            padding-bottom: 30px;
-        }
-
-        @media (max-width: 568px) {
-            flex-direction: column;
-        }
+    @media (max-width: 768px) {
+      margin-right: 20px;
     }
-
-    &__card-text {
-        margin-top: 24px;
-        font-size: 17px;
-        line-height: 27px;
-        color: #000C2D;
-
-        @media (max-width: 768px) {
-            margin-right: 20px;
-        }
-    }
+  }
 }

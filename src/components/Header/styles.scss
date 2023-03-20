@@ -1,64 +1,56 @@
 .header {
-    background-color: #F5F5F5;
-    height: 80px;
+  background-color: #f5f5f5;
+  padding-top: 20px;
+
+  &__container {
+    display: flex;
+    line-height: 80px;
 
     @media (max-width: 768px) {
-        height: 160px;
-        padding-top: 20px;
+      flex-direction: column;
+      line-height: 40px;
+      text-align: center;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    margin-left: auto;
+
+    @media (max-width: 768px) {
+      margin: 0 auto;
     }
 
     @media (max-width: 568px) {
-        height: 373px;
+      flex-direction: column;
+      margin: 30px 0;
+    }
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #000c2d;
+    margin-right: 32px;
+
+    &--active {
+      font-weight: 700;
     }
 
-    &__container {
-        display: flex;
-        line-height: 80px;
-
-        @media (max-width: 768px) {
-            flex-direction: column;
-            line-height: 40px;
-            text-align: center;
-        }
+    @media (max-width: 568px) {
+      margin: 0;
     }
+  }
 
-    &__nav {
-        display: flex;
-        margin-left: auto;
+  &__button {
+    font-size: 16px;
+    color: #2f70fe;
+    padding: 10px 20px;
+    align-self: center;
+    border-color: #2f70fe;
 
-        @media (max-width: 768px) {
-            margin: 0 auto;
-        }
-
-        @media (max-width: 568px) {
-            flex-direction: column;
-            margin: 30px 0;
-        }
+    @media (max-width: 568px) {
+      margin-bottom: 20px;
     }
-
-    &__nav-link {
-        text-decoration: none;
-        font-size: 14px;
-        color: #000C2D;
-        margin-right: 32px;
-
-        &--active {
-            font-weight: 700;
-        }
-
-        @media (max-width: 568px) {
-            margin: 0;
-        }
-
-    }
-
-    &__button {
-        font-size: 16px;
-        color: #2F70FE;
-        width: 134px;
-        height: 42px;
-        align-self: center;
-        border-color: #2F70FE;
-    }
-
+  }
 }
